@@ -11,6 +11,19 @@
         <h1>Ajit Sridhar</h1>
         <p>Senior Product Manager | Tech Enthusiast</p>
     </header>
+    <nav class="navbar">
+        <div class="menu-icon" id="menu-icon" tabindex="0" aria-label="Open menu" aria-expanded="false" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/artifacts/">Product Artifacts</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I'm Ajit, a passionate Product Manager with a love for building impactful projects and learning new technologies.</p>
@@ -41,5 +54,19 @@
     <footer>
         <p>Contact: ajit@ajitsridhar.xyz | LinkedIn: linkedin.com/in/ajitsridhar</p>
     </footer>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        menuIcon.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                navLinks.classList.toggle('active');
+                menuIcon.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            }
+        });
+    </script>
 </body>
 </html> 

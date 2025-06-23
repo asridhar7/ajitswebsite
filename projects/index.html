@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ajit Sridhar</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ajit Sridhar</h1>
+        <p>Senior Product Manager | Tech Enthusiast</p>
+    </header>
+    <nav class="navbar">
+        <div class="menu-icon" id="menu-icon" tabindex="0" aria-label="Open menu" aria-expanded="false" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects/">Projects</a></li>
+            <li><a href="../artifacts/">Product Artifacts</a></li>
+            <li><a href="../contact/">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Projects</h2>
+        <p>This is the Projects page. Content coming soon!</p>
+    </main>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        menuIcon.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                navLinks.classList.toggle('active');
+                menuIcon.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            }
+        });
+    </script>
+</body>
+</html> 
